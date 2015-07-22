@@ -435,17 +435,17 @@ int Buffer_EscapeStringValidated (JSOBJ obj, JSONObjectEncoder *enc, const char 
       case 22:
       case 24:
       {
-        if (enc->escapeForwardSlashes)
-        {
+//        if (enc->escapeForwardSlashes)
+//        {
           *(of++) = *( (char *) (g_escapeChars + utflen + 0));
           *(of++) = *( (char *) (g_escapeChars + utflen + 1));
           io ++;
-        }
-        else
-        {
-          // Same as case 1 above.
-          *(of++) = (*io++);
-        }
+//        }
+//        else
+//        {
+//          // Same as case 1 above.
+//          *(of++) = (*io++);
+//        }
         continue;
       }
       // This can never happen, it's here to make L4 VC++ happy
